@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Course Home Page for WDD231">
+  <meta name="author" content="Luis">
+  <title>Course Home Page</title>
+  <!-- Google Fonts API -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  <!-- JavaScript Files with defer -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/course.js" defer></script>
+</head>
+<body>
+  <header>
+    <img src="images/profile.jpg" alt="Profile Photo">
+    <span class="author-name">Luis</span>
+  </header>
+
+  <nav>
+    <!-- Responsive mobile bottom -->
+    <button id="menu-toggle" aria-label="Toggle Navigation">Menu</button>
+    <ul id="nav-list">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chamber.html">Chamber</a></li>
+      <li><a href="final.html">Final</a></li>
+      <li><a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
+      <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Home</h1>
+    <section>
+      <h2>Course Overview</h2>
+      <p>This is the introduction to the web course home page, where you will find course details and resources.</p>
+    </section>
+    <section>
+      <h2>Announcements</h2>
+      <p>Check out the latest updates and course news.</p>
+    </section>
+    <section>
+      <h2>Course List</h2>
+      <!-- Filters Bottoms -->
+      <div id="course-controls">
+        <button id="btn-all">All Courses</button>
+        <button id="btn-wdd">WDD Courses</button>
+        <button id="btn-cse">CSE Courses</button>
+      </div>
+      <div id="courses"></div>
+      <p>Total Credits: <span id="total-credits">0</span></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Luis, El Salvador</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
