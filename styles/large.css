@@ -1,0 +1,19 @@
+@media only screen and (min-width: 768px) {
+  nav #menu-toggle {
+    display: none;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav ul li {
+    margin: 0;
+  }
+
+  nav ul li a {
+    border-bottom: none;
+    padding: 1em 1.5em;
+  }
+}
