@@ -5,8 +5,8 @@
   
   nav ul {
     display: flex !important;
-    justify-content: center;
     flex-direction: row;
+    justify-content: center;
     gap: 20px;
     padding: 10px 0;
   }

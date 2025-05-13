@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Tech Solutions Inc.",
+    "address": "123 Innovation Way, Tech City",
+    "phone": "(555) 123-4567",
+    "website": "https://techsolutions.com",
+    "image": "tech.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Green Energy Co.",
+    "address": "456 Solar Blvd, Eco Town",
+    "phone": "(555) 987-6543",
+    "website": "https://greenenergy.com",
+    "image": "energy.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Local Bakery",
+    "address": "789 Bread St, Food District",
+    "phone": "(555) 456-7890",
+    "website": "https://localbakery.com",
+    "image": "bakery.jpg",
+    "membership": 1
+  },
+  {
+    "name": "FinServe Bank",
+    "address": "159 Finance Ave, Money City",
+    "phone": "(555) 159-7530",
+    "website": "https://finservebank.com",
+    "image": "bank.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Fashion Hub",
+    "address": "654 Style Ln, Trendy Town",
+    "phone": "(555) 654-3210",
+    "website": "https://fashionhub.com",
+    "image": "fashion.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Auto Garage",
+    "address": "987 Motorway, Car City",
+    "phone": "(555) 789-0123",
+    "website": "https://autogarage.com",
+    "image": "garage.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Health Plus",
+    "address": "321 Wellness Blvd, Fit City",
+    "phone": "(555) 321-9876",
+    "website": "https://healthplus.com",
+    "image": "healthy.jpg",
+    "membership": 2
+  }
+]

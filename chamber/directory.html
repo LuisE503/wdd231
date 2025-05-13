@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Directory of Chamber of Commerce Members">
+  <meta name="author" content="Luis">
+  <link rel="icon" href="images/chamber-favicon.ico">
+  
+  <meta property="og:title" content="Chamber Directory | Luis">
+  <meta property="og:description" content="Discover local businesses and connect with members of the Chamber of Commerce.">
+  <meta property="og:image" content="images/chamber-banner.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/chamber/directory.html">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>Chamber Directory | Chamber of Commerce</title>
+  
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+  
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Chamber of Commerce</h1>
+    <button id="menu" class="hamburger-menu" title="Menu">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </button>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a class="active" href="directory.html">Directory</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <main>
+    <h2>Member Directory</h2>
+    
+    <div class="view-toggle">
+      <button id="grid-view">Grid View</button>
+      <button id="list-view">List View</button>
+    </div>
+    
+    <section id="member-container" class="grid">
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy;<span id="currentyear"></span> Luis | Chamber of Commerce</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

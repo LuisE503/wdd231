@@ -1,3 +1,4 @@
+
 :root {
   --true-blue: #0466c8;
   --yale-blue: #023e7d;
@@ -22,15 +23,8 @@ header {
   text-align: center;
   position: relative;
 }
-.profile-info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.avatar {
-  width: 50px;
-  border-radius: 50%;
+header h1 {
+  margin: 5px 0;
 }
 
 nav {
@@ -38,52 +32,9 @@ nav {
   text-align: center;
   position: relative;
 }
-nav button#menu {
-  background: transparent;
-  border: none;
-  font-size: 40px;
-  color: var(--alice-blue);
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
-  display: block;
-}
-nav button#menu::before {
-  content: "≡";
-}
-
-nav ul {
-  list-style: none;
-  margin: 0;
-  padding: 10px 0;
-  display: none; 
-  flex-direction: column;
-  gap: 5px;
-}
-nav ul li {
-  margin: 0 5px;
-}
-nav a {
-  display: inline-block;
-  padding: 8px 16px;
-  background: var(--true-blue);
-  color: var(--alice-blue);
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-nav a:hover {
-  background-color: var(--oxford-blue);
-  transform: scale(1.05);
-}
-nav a.active {
-  background-color: #fef9d9;
-  color: var(--oxford-blue);
-}
 
 .hamburger-menu {
-  display: none; 
+  display: none;  
   flex-direction: column;
   justify-content: space-between;
   width: 35px;
@@ -91,6 +42,7 @@ nav a.active {
   background: transparent;
   border: none;
   cursor: pointer;
+  margin: 10px auto; 
 }
 .hamburger-menu .bar {
   width: 100%;
@@ -99,55 +51,29 @@ nav a.active {
   border-radius: 2px;
 }
 
-main {
-  padding: 20px;
-  display: flex;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: flex;  
   flex-direction: column;
-  gap: 20px;
+  gap: 5px;
 }
-.top-section {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+nav ul li a {
+  padding: 8px 16px;
+  background: var(--true-blue);
+  color: var(--alice-blue);
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
-.courseWork-box {
-  background: #ffffff;
-  border: 2px solid var(--true-blue);
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-  padding: 15px;
-  box-sizing: border-box;
-  text-align: center;
+nav ul li a:hover {
+  background: var(--oxford-blue);
+  transform: scale(1.05);
 }
-.courseWork-box h2 {
-  margin-top: 0;
-}
-.courseWork-box ul {
-  list-style: disc;
-  text-align: left;
-  padding-left: 20px;
-}
-.country-box {
-  background: #ffffff;
-  border: 2px solid var(--true-blue);
-  border-radius: 10px;
-  width: 300px;
-  height: 300px;
-  padding: 15px;
-  box-sizing: border-box;
-  text-align: center;
-}
-.country-box h2 {
-  margin-top: 0;
-}
-.country-box picture,
-.country-box img {
-  width: 80%;
-  height: auto;
-  border-radius: 10px;
-  margin: 0 auto;
+nav ul li a.active {
+  background: #fef9d9;
+  color: var(--oxford-blue);
 }
 
 .boxButton {
@@ -168,42 +94,75 @@ main {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 .courseButton:hover {
-  background-color: var(--oxford-blue);
+  background: var(--oxford-blue);
   transform: scale(1.05);
 }
 
-.certificate-box {
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.view-toggle button {
+  padding: 8px 12px;
+  background: var(--true-blue);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.view-toggle button:hover {
+  background: var(--oxford-blue);
+  transform: scale(1.05);
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.member-card {
   background: #ffffff;
   border: 2px solid var(--true-blue);
   border-radius: 10px;
   padding: 15px;
   text-align: center;
+  box-sizing: border-box;
 }
-.certificate-box h2 {
-  margin-top: 0;
-}
-.boxcertificate01.boxCourse {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 10px;
-  margin: 10px auto;
+.member-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.course-card {
-  border: 1px solid #ddd;
+#member-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+#member-container.list {
+  display: block;
+  width: 100%;
+}
+
+footer {
+  background: var(--oxford-blue);
+  color: var(--alice-blue);
+  text-align: center;
   padding: 10px;
-  border-radius: 5px;
-  background: #fafafa;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  position: relative;
-}
-.course-card:hover {
-  background-color: #e0e0e0;
-  transform: scale(1.05);
-}
-.course-card.completed {
-  background: var(--yale-blue);
-  color: #fff;
 }
 
 dialog {
@@ -220,14 +179,14 @@ dialog {
   width: 90%;
   max-width: 500px;
   background: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 dialog[open] {
   opacity: 1;
 }
 dialog h2,
 dialog h3 {
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
   font-weight: normal;
 }
 dialog p {
@@ -251,17 +210,10 @@ dialog button#closeModal:hover {
   transform: scale(1.05);
 }
 
-footer {
-  background: var(--oxford-blue);
-  color: var(--alice-blue);
-  text-align: center;
-  padding: 10px;
-}
-
 @media screen and (max-width: 768px) {
   .hamburger-menu {
     display: flex;
-    margin: 10px auto; 
+    margin: 10px auto;
   }
   nav ul {
     display: none;
