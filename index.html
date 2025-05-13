@@ -2,81 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course Home Page for WDD231">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="W01 Assignment: Course Home Page for WDD 231">
   <meta name="author" content="Luis">
-  <title>Course Home Page</title>
-  <!-- Google Fonts API -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/favorite-favicon.ico">
+  
+  <!-- Social and Open Graph Meta Tags -->
+  <meta property="og:title" content="Course Home Page | Luis">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="images/santaAna_small.jpg">
+  <meta property="og:url" content="https://your-github-username.github.io/wdd231/index.html">
+  <meta name="twitter:card" content="summary_large_image">
+  
+  <title>W01 Assignment: Course Home Page | Luis</title>
+  
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Google Fonts (Barlow and Lato as examples) -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
+  
   <!-- CSS Files -->
-  <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/large.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style-small.css">
+  <link rel="stylesheet" href="styles/style-large.css">
+  
   <!-- JavaScript Files with defer attribute -->
-  <script src="scripts/navigation.js" defer></script>
-  <script src="scripts/date.js" defer></script>
-  <script src="scripts/course.js" defer></script>
+  <script src="scripts/main.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 <body>
-  <!-- HEADER: Contains profile image and your name -->
   <header>
-    <img src="images/profile.jpg" alt="Profile Photo of Luis">
-    <span class="author-name">Luis</span>
+    <!-- Header top: BYU-I logo and student name -->
+    <div class="header-top">
+      <img src="images/byui-logo.png" alt="BYU-I Logo" class="byui-logo">
+      <span class="student-name">Luis</span>
+    </div>
+    <!-- Course Title -->
+    <h1 class="course-title">WDD 231: Web Frontend Development I</h1>
+    <!-- Menu button for mobile navigation -->
+    <button id="menu" title="Menu"></button>
   </header>
   
-  <!-- NAVIGATION: Responsive navigation menu with wayfinding -->
   <nav>
-    <!-- Hamburger menu button for small screens -->
-    <button id="menu-toggle" aria-label="Toggle Navigation">Menu</button>
-    <ul id="nav-list">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="chamber.html">Chamber</a></li>
-      <li><a href="final.html">Final</a></li>
-      <li><a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
-      <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+    <ul>
+      <li><a class="active" href="index.html">Home</a></li>
+      <li><a href="#">W1</a></li>
+      <li><a href="#">W2</a></li>
+      <li><a href="#">W3</a></li>
+      <li><a href="#">W4</a></li>
+      <li><a href="#">W5</a></li>
+      <li><a href="#">W6</a></li>
+      <li><a href="#">W7</a></li>
+      <li><a href="#">W01 Assignment: Course Home Page</a></li>
     </ul>
   </nav>
   
-  <!-- MAIN CONTENT AREA -->
   <main>
-    <h1>Home</h1>
-    <!-- Panels Section replicating the provided site map -->
-    <div class="home-panels">
-      <!-- Left Panel: Course Work -->
-      <div class="panel course-work">
-        <h2>Course Work</h2>
-        <ul>
-          <li>Lecture Notes</li>
-          <li>Assignments</li>
-          <li>Project Guidelines</li>
-        </ul>
-      </div>
-      <!-- Right Panel: Location with image -->
-      <div class="panel location">
-        <!-- Adapted location: Your local region -->
-        <h2>Santa Ana, El Salvador</h2>
-        <img src="images/location.jpg" alt="Scenic View of Santa Ana, El Salvador">
-      </div>
-    </div>
+    <!-- Main heading -->
+    <h2>Course Home Page</h2>
     
-    <!-- Certificate Section -->
-    <section class="certificate">
+    <!-- Section 1: Course Work Overview -->
+    <section class="courseWork-box">
+      <h2>Course Work</h2>
+      <ul>
+        <li>Chamber of Commerce Site Planning</li>
+        <li>Chamber Directory Page</li>
+        <li>Chamber Home Page</li>
+        <li>Membership Application Form / Project Proposal</li>
+        <li>Discover Page / Project Site Plan</li>
+        <li>Individual Website Project</li>
+        <li>Final Exam Test</li>
+      </ul>
+    </section>
+    
+    <!-- Section 2: Local Area (Santa Ana, El Salvador) -->
+    <section class="location-box">
+      <h2>Santa Ana, El Salvador</h2>
+      <picture>
+        <source media="(min-width: 768px)" srcset="images/santaAna_large.jpg">
+        <source media="(min-width: 480px)" srcset="images/santaAna_medium.jpg">
+        <img src="images/santaAna_small.jpg" alt="View of Santa Ana, El Salvador" width="300" height="225">
+      </picture>
+      <p>Santa Ana City</p>
+    </section>
+    
+    <!-- Section 3: Certificate / Course List -->
+    <section class="certificate-box">
       <h2>Web and Computer Programming Certificate</h2>
-      <!-- Course Filter Buttons -->
-      <div id="course-controls">
-        <button id="btn-all">All</button>
-        <button id="btn-cse">CSE</button>
-        <button id="btn-wdd">WDD</button>
+      <!-- Filter buttons for course categories -->
+      <div class="boxButton">
+        <button class="courseButton" value="all" title="Filter All Courses">All</button>
+        <button class="courseButton" value="cse" title="Filter CSE Courses">CSE</button>
+        <button class="courseButton" value="wdd" title="Filter WDD Courses">WDD</button>
       </div>
-      <!-- Container to display course cards dynamically -->
-      <div id="courses"></div>
-      <!-- Total credits dynamically calculated -->
-      <p>Total Credits: <span id="total-credits">0</span></p>
+      <!-- Container for dynamically displaying course cards -->
+      <div class="boxcertificate01 boxCourse"></div>
+      <!-- Optional dialog for course details -->
+      <dialog id="courses-details"></dialog>
+      <!-- Dynamic total credits display -->
+      <p id="totalCreditsCert01">Total Credits for Certificate: 0</p>
     </section>
   </main>
   
-  <!-- FOOTER: Contains dynamic copyright year and last modified date -->
   <footer>
-    <p>&copy; <span id="currentyear"></span> Luis, El Salvador</p>
+    <!-- Dynamic footer: current year and last update -->
+    <p>&copy; <span id="currentyear"></span> Luis | Santa Ana, El Salvador</p>
     <p id="lastModified"></p>
   </footer>
 </body>

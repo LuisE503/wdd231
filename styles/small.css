@@ -1,104 +1,134 @@
+/* style-small.css */
+
 /* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  color: #333;
+  font-family: 'Lato', sans-serif;
   background: #f5f5f5;
+  color: #333;
 }
 
-/* HEADER styling */
+/* Header styling */
 header {
-  display: flex;
-  align-items: center;
-  padding: 1em;
   background: #fff;
+  padding: 0.5em;
   border-bottom: 1px solid #ccc;
+  text-align: center;
+  position: relative;
 }
 
-header img {
+/* Header top: BYU-I logo and student name */
+.header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+.byui-logo {
   width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
+  height: auto;
+}
+.student-name {
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
-/* NAVIGATION styling */
+/* Course Title styling */
+.course-title {
+  margin: 0.5em 0;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.8em;
+}
+
+/* Menu button (hamburger icon) */
+header button#menu {
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  position: absolute;
+  top: 0.5em;
+  left: 0.5em;
+  cursor: pointer;
+}
+
+/* Navigation styling */
 nav {
   background: #004080;
 }
-
-nav #menu-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 1.2em;
-  padding: 1em;
-  display: block;
-}
-
 nav ul {
   list-style: none;
-  margin: 0;
   padding: 0;
-  display: none; /* Hidden by default, shown on toggle for mobile */
+  margin: 0;
+  display: none;  /* Hidden on mobile until toggled */
   flex-direction: column;
 }
-
-nav ul li a {
-  display: block;
-  padding: 1em;
-  text-decoration: none;
-  color: #fff;
+nav ul li {
   border-bottom: 1px solid #003060;
 }
-
+nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  padding: 1em;
+}
 nav ul li a:hover,
 nav ul li a.active {
   background: #003060;
 }
 
-/* MAIN content styling */
+/* Main Content styling */
 main {
   padding: 1em;
 }
-
-/* Home Panels Container: Stacked vertically on small screens */
-.home-panels {
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  margin-bottom: 2em;
+main h2 {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.6em;
+  margin-bottom: 0.5em;
 }
 
-/* Panel Styling */
-.home-panels .panel {
+/* Section styling */
+section {
   background: #fff;
+  margin-bottom: 1em;
   padding: 1em;
   border-radius: 5px;
 }
 
-/* Styling for course work panel list */
-.home-panels .course-work ul {
-  padding-left: 1.5em;
+/* Course Work Box */
+.courseWork-box ul {
+  list-style: disc;
+  padding-left: 20px;
 }
 
-/* Location panel image styling */
-.home-panels .location img {
+/* Location Box */
+.location-box picture,
+.location-box img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
 
-/* Certificate Section Styling */
-.certificate {
-  background: #fff;
-  padding: 1em;
-  border-radius: 5px;
-  margin-bottom: 2em;
+/* Certificate Box - Filter Buttons */
+.boxButton {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 1em;
+}
+.courseButton {
+  padding: 0.5em 1em;
+  background: #004080;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
-/* Course Cards */
+/* Course list container */
+.boxcertificate01 {
+  margin-bottom: 1em;
+}
+/* Course cards */
 .course-card {
   border: 1px solid #ddd;
   padding: 1em;
@@ -106,16 +136,14 @@ main {
   border-radius: 5px;
   background-color: #fafafa;
 }
-
-/* Mark completed courses with a different background */
 .course-card.completed {
   background-color: #d0f0c0;
   border-color: #90ee90;
 }
 
-/* FOOTER Styling */
+/* Footer styling */
 footer {
+  background: #ccc;
   text-align: center;
   padding: 1em;
-  background: #ccc;
 }

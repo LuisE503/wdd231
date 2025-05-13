@@ -1,35 +1,31 @@
-@media only screen and (min-width: 768px) {
-  /* Hide the hamburger menu button on large screens */
-  nav #menu-toggle {
-    display: none;
-  }
-
-  /* Display navigation menu horizontally */
+/* style-large.css */
+@media screen and (min-width: 768px) {
+  /* Horizontal navigation for desktop */
   nav ul {
     display: flex;
     justify-content: center;
   }
-
   nav ul li {
-    margin: 0;
+    border: none;
   }
-
   nav ul li a {
-    border-bottom: none;
     padding: 1em 1.5em;
   }
   
-  /* Home Panels: Display side by side on larger screens */
-  .home-panels {
-    flex-direction: row;
+  /* Hide the mobile menu button on wide screens */
+  header button#menu {
+    display: none;
   }
   
-  .home-panels .panel {
-    flex: 1;
+  /* Main content layout: use grid for sections */
+  main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
   }
   
-  /* Add spacing between the two panels */
-  .home-panels .course-work {
-    margin-right: 1em;
+  /* Ensure certificate box spans full width */
+  .certificate-box {
+    grid-column: 1 / -1;
   }
 }

@@ -1,5 +1,7 @@
+// courses.js
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Array of course objects as displayed in the image example
+  // Array of course objects for the certificate
   const courses = [
     { code: "CSE 110", title: "Introduction to Computing", subject: "CSE", credits: 3, completed: true },
     { code: "WDD 130", title: "Web Fundamentals", subject: "WDD", credits: 3, completed: false },
@@ -9,28 +11,23 @@ document.addEventListener('DOMContentLoaded', function() {
     { code: "WDD 231", title: "Advanced Web Development", subject: "WDD", credits: 3, completed: false }
   ];
 
-  // Variable to hold the filtered courses; defaults to all courses
+  // Initially display all courses
   let filteredCourses = courses;
   
-  // Select the container elements for courses and total credits
-  const coursesContainer = document.getElementById('courses');
-  const totalCreditsElem = document.getElementById('total-credits');
-
-  // Select filter buttons
-  const btnAll = document.getElementById('btn-all');
-  const btnCse = document.getElementById('btn-cse');
-  const btnWdd = document.getElementById('btn-wdd');
+  // Container for course cards and total credits element
+  const coursesContainer = document.querySelector('.boxcertificate01.boxCourse');
+  const totalCreditsEl = document.getElementById('totalCreditsCert01');
 
   // Function to display courses dynamically
   function displayCourses(courseList) {
-    // Clear the container
+    // Clear container
     coursesContainer.innerHTML = '';
 
-    // Loop through each course and create a course card
+    // Loop through courses and create card for each
     courseList.forEach(course => {
       const courseCard = document.createElement('div');
       courseCard.classList.add('course-card');
-      // Add a special class if the course is completed
+      // If course is completed, add a special styling class
       if (course.completed) {
         courseCard.classList.add('completed');
       }
@@ -42,27 +39,25 @@ document.addEventListener('DOMContentLoaded', function() {
       coursesContainer.appendChild(courseCard);
     });
 
-    // Calculate the total credits using reduce
+    // Calculate total credits using reduce
     const totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
-    totalCreditsElem.textContent = totalCredits;
+    totalCreditsEl.textContent = "Total Credits for Certificate: " + totalCredits;
   }
 
-  // Event listeners for filter buttons
-  btnAll.addEventListener('click', function() {
-    filteredCourses = courses;
-    displayCourses(filteredCourses);
-  });
-
-  btnCse.addEventListener('click', function() {
-    filteredCourses = courses.filter(course => course.subject === "CSE");
-    displayCourses(filteredCourses);
-  });
-
-  btnWdd.addEventListener('click', function() {
-    filteredCourses = courses.filter(course => course.subject === "WDD");
-    displayCourses(filteredCourses);
-  });
-
-  // Display all courses on initial load
+  // Initial display of all courses
   displayCourses(filteredCourses);
+
+  // Add event listeners to filter buttons
+  const filterButtons = document.querySelectorAll('.courseButton');
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filterValue = this.value;
+      if (filterValue === 'all') {
+        filteredCourses = courses;
+      } else {
+        filteredCourses = courses.filter(course => course.subject.toLowerCase() === filterValue);
+      }
+      displayCourses(filteredCourses);
+    });
+  });
 });
