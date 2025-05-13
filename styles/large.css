@@ -1,6 +1,6 @@
 /* style-large.css */
 @media screen and (min-width: 768px) {
-  /* Horizontal navigation for desktop */
+  /* Horizontal Navigation */
   nav ul {
     display: flex;
     justify-content: center;
@@ -12,19 +12,19 @@
     padding: 1em 1.5em;
   }
   
-  /* Hide the mobile menu button on wide screens */
+  /* Hide mobile hamburger menu on larger screens */
   header button#menu {
     display: none;
   }
   
-  /* Main content layout: use grid for sections */
+  /* Main Content Layout: Arrange sections side-by-side where appropriate */
   main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1em;
   }
   
-  /* Ensure certificate box spans full width */
+  /* Make the certificate box span full width */
   .certificate-box {
     grid-column: 1 / -1;
   }

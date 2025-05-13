@@ -1,7 +1,7 @@
 // courses.js
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Array of course objects for the certificate
+  // Course List Array for the Certificate
   const courses = [
     { code: "CSE 110", title: "Introduction to Computing", subject: "CSE", credits: 3, completed: true },
     { code: "WDD 130", title: "Web Fundamentals", subject: "WDD", credits: 3, completed: false },
@@ -11,23 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
     { code: "WDD 231", title: "Advanced Web Development", subject: "WDD", credits: 3, completed: false }
   ];
 
-  // Initially display all courses
+  // Initially show all courses
   let filteredCourses = courses;
   
-  // Container for course cards and total credits element
+  // Container elements for course cards and total credits display
   const coursesContainer = document.querySelector('.boxcertificate01.boxCourse');
   const totalCreditsEl = document.getElementById('totalCreditsCert01');
 
-  // Function to display courses dynamically
+  // Function to render courses
   function displayCourses(courseList) {
     // Clear container
     coursesContainer.innerHTML = '';
-
-    // Loop through courses and create card for each
+    
+    // Loop over the course list and create course cards
     courseList.forEach(course => {
       const courseCard = document.createElement('div');
       courseCard.classList.add('course-card');
-      // If course is completed, add a special styling class
       if (course.completed) {
         courseCard.classList.add('completed');
       }
@@ -38,13 +37,13 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
       coursesContainer.appendChild(courseCard);
     });
-
-    // Calculate total credits using reduce
+    
+    // Calculate the total credits using reduce
     const totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
     totalCreditsEl.textContent = "Total Credits for Certificate: " + totalCredits;
   }
 
-  // Initial display of all courses
+  // Initial render of all courses
   displayCourses(filteredCourses);
 
   // Add event listeners to filter buttons
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', function() {
   filterButtons.forEach(button => {
     button.addEventListener('click', function() {
       const filterValue = this.value;
-      if (filterValue === 'all') {
+      if (filterValue === "all") {
         filteredCourses = courses;
       } else {
         filteredCourses = courses.filter(course => course.subject.toLowerCase() === filterValue);

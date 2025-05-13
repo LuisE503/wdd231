@@ -1,12 +1,11 @@
 // main.js
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Toggle navigation for mobile view
+  // Toggle navigation menu for mobile view
   const menuButton = document.getElementById('menu');
   const navList = document.querySelector('nav ul');
 
   menuButton.addEventListener('click', function() {
-    // Toggle the display of the navigation list
     if (navList.style.display === 'block') {
       navList.style.display = 'none';
     } else {
@@ -14,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
-  // Insert current year dynamically in the footer
+  // Set current year dynamically in footer
   const currentYearSpan = document.getElementById('currentyear');
   currentYearSpan.textContent = new Date().getFullYear();
 
-  // Insert document last modified date dynamically
+  // Set last modified date dynamically in footer (using document.lastModified)
   const lastModifiedElem = document.getElementById('lastModified');
   lastModifiedElem.textContent = "Last Update: " + document.lastModified;
 });
