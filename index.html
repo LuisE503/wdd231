@@ -11,19 +11,21 @@
   <!-- CSS Files -->
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
-  <!-- JavaScript Files with defer -->
+  <!-- JavaScript Files with defer attribute -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/course.js" defer></script>
 </head>
 <body>
+  <!-- HEADER: Contains profile image and your name -->
   <header>
-    <img src="images/profile.jpg" alt="Profile Photo">
+    <img src="images/profile.jpg" alt="Profile Photo of Luis">
     <span class="author-name">Luis</span>
   </header>
-
+  
+  <!-- NAVIGATION: Responsive navigation menu with wayfinding -->
   <nav>
-    <!-- Responsive mobile bottom -->
+    <!-- Hamburger menu button for small screens -->
     <button id="menu-toggle" aria-label="Toggle Navigation">Menu</button>
     <ul id="nav-list">
       <li><a href="index.html" class="active">Home</a></li>
@@ -33,30 +35,46 @@
       <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
     </ul>
   </nav>
-
+  
+  <!-- MAIN CONTENT AREA -->
   <main>
     <h1>Home</h1>
-    <section>
-      <h2>Course Overview</h2>
-      <p>This is the introduction to the web course home page, where you will find course details and resources.</p>
-    </section>
-    <section>
-      <h2>Announcements</h2>
-      <p>Check out the latest updates and course news.</p>
-    </section>
-    <section>
-      <h2>Course List</h2>
-      <!-- Filters Bottoms -->
-      <div id="course-controls">
-        <button id="btn-all">All Courses</button>
-        <button id="btn-wdd">WDD Courses</button>
-        <button id="btn-cse">CSE Courses</button>
+    <!-- Panels Section replicating the provided site map -->
+    <div class="home-panels">
+      <!-- Left Panel: Course Work -->
+      <div class="panel course-work">
+        <h2>Course Work</h2>
+        <ul>
+          <li>Lecture Notes</li>
+          <li>Assignments</li>
+          <li>Project Guidelines</li>
+        </ul>
       </div>
+      <!-- Right Panel: Location with image -->
+      <div class="panel location">
+        <!-- Adapted location: Your local region -->
+        <h2>Santa Ana, El Salvador</h2>
+        <img src="images/location.jpg" alt="Scenic View of Santa Ana, El Salvador">
+      </div>
+    </div>
+    
+    <!-- Certificate Section -->
+    <section class="certificate">
+      <h2>Web and Computer Programming Certificate</h2>
+      <!-- Course Filter Buttons -->
+      <div id="course-controls">
+        <button id="btn-all">All</button>
+        <button id="btn-cse">CSE</button>
+        <button id="btn-wdd">WDD</button>
+      </div>
+      <!-- Container to display course cards dynamically -->
       <div id="courses"></div>
+      <!-- Total credits dynamically calculated -->
       <p>Total Credits: <span id="total-credits">0</span></p>
     </section>
   </main>
-
+  
+  <!-- FOOTER: Contains dynamic copyright year and last modified date -->
   <footer>
     <p>&copy; <span id="currentyear"></span> Luis, El Salvador</p>
     <p id="lastModified"></p>

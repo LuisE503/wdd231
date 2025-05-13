@@ -1,8 +1,10 @@
 @media only screen and (min-width: 768px) {
+  /* Hide the hamburger menu button on large screens */
   nav #menu-toggle {
     display: none;
   }
 
+  /* Display navigation menu horizontally */
   nav ul {
     display: flex;
     justify-content: center;
@@ -15,5 +17,19 @@
   nav ul li a {
     border-bottom: none;
     padding: 1em 1.5em;
+  }
+  
+  /* Home Panels: Display side by side on larger screens */
+  .home-panels {
+    flex-direction: row;
+  }
+  
+  .home-panels .panel {
+    flex: 1;
+  }
+  
+  /* Add spacing between the two panels */
+  .home-panels .course-work {
+    margin-right: 1em;
   }
 }

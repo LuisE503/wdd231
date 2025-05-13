@@ -7,7 +7,7 @@ body {
   background: #f5f5f5;
 }
 
-/* Header */
+/* HEADER styling */
 header {
   display: flex;
   align-items: center;
@@ -23,7 +23,7 @@ header img {
   margin-right: 10px;
 }
 
-/* Navigation */
+/* NAVIGATION styling */
 nav {
   background: #004080;
 }
@@ -41,7 +41,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: none; 
+  display: none; /* Hidden by default, shown on toggle for mobile */
   flex-direction: column;
 }
 
@@ -58,17 +58,47 @@ nav ul li a.active {
   background: #003060;
 }
 
+/* MAIN content styling */
 main {
   padding: 1em;
 }
 
-section {
+/* Home Panels Container: Stacked vertically on small screens */
+.home-panels {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
   margin-bottom: 2em;
+}
+
+/* Panel Styling */
+.home-panels .panel {
   background: #fff;
   padding: 1em;
   border-radius: 5px;
 }
 
+/* Styling for course work panel list */
+.home-panels .course-work ul {
+  padding-left: 1.5em;
+}
+
+/* Location panel image styling */
+.home-panels .location img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+/* Certificate Section Styling */
+.certificate {
+  background: #fff;
+  padding: 1em;
+  border-radius: 5px;
+  margin-bottom: 2em;
+}
+
+/* Course Cards */
 .course-card {
   border: 1px solid #ddd;
   padding: 1em;
@@ -77,11 +107,13 @@ section {
   background-color: #fafafa;
 }
 
+/* Mark completed courses with a different background */
 .course-card.completed {
-  background-color: #d0f0c0; 
+  background-color: #d0f0c0;
   border-color: #90ee90;
 }
 
+/* FOOTER Styling */
 footer {
   text-align: center;
   padding: 1em;
