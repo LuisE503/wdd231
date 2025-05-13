@@ -1,145 +1,246 @@
-/* style-small.css */
 
-/* Global Styles */
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Lato', sans-serif;
-  background-color: #f5f5f5;
-  color: #333;
+:root {
+  --true-blue: #0466c8;
+  --yale-blue: #023e7d;
+  --oxford-blue: #002855;
+  --alice-blue: #edf6f9;
+  --font-size-base: 20px;
 }
 
-/* HEADER */
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f5f5f5;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+}
+
 header {
-  background: #fff;
-  padding: 0.5em;
-  border-bottom: 1px solid #ccc;
+  background: var(--oxford-blue);
+  color: var(--alice-blue);
+  padding: 10px;
   text-align: center;
   position: relative;
 }
-
-/* Header Top: BYU-I logo and name */
-.header-top {
+.profile-info {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
-  margin-bottom: 0.5em;
+  gap: 10px;
 }
-.byui-logo {
+.avatar {
   width: 50px;
-  height: auto;
-}
-.student-name {
-  font-size: 1.2em;
-  font-weight: bold;
+  border-radius: 50%;
 }
 
-/* Course Title */
-.course-title {
-  font-family: 'Barlow', sans-serif;
-  font-size: 1.8em;
-  margin: 0.5em 0;
+nav {
+  background: var(--yale-blue);
+  text-align: center;
+  position: relative;
 }
-
-/* Mobile Menu Button (hamburger icon) */
-header button#menu {
+nav button#menu {
   background: transparent;
   border: none;
-  font-size: 1.5em;
+  font-size: 40px;
+  color: var(--alice-blue);
   position: absolute;
-  top: 0.5em;
-  left: 0.5em;
+  top: 10px;
+  right: 10px;
   cursor: pointer;
-}
-
-/* NAVIGATION */
-nav {
-  background: #004080;
-}
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: none; /* Hidden on mobile until toggled */
-  flex-direction: column;
-}
-nav ul li {
-  border-bottom: 1px solid #003060;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #fff;
-  padding: 1em;
   display: block;
 }
-nav ul li a:hover,
-nav ul li a.active {
-  background: #003060;
+nav button#menu::before {
+  content: "≡";
 }
 
-/* MAIN CONTENT */
-main {
-  padding: 1em;
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+  display: none; 
+  flex-direction: column;
+  gap: 5px;
 }
-
-/* Section styling */
-section {
-  background: #fff;
-  margin-bottom: 1em;
-  padding: 1em;
+nav ul li {
+  margin: 0 5px;
+}
+nav a {
+  display: inline-block;
+  padding: 8px 16px;
+  background: var(--true-blue);
+  color: var(--alice-blue);
+  text-decoration: none;
   border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+nav a:hover {
+  background-color: var(--oxford-blue);
+  transform: scale(1.05);
+}
+nav a.active {
+  background-color: #fef9d9;
+  color: var(--oxford-blue);
 }
 
-/* Course Work Box */
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.courseWork-box {
+  background: #ffffff;
+  border: 2px solid var(--true-blue);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.courseWork-box h2 {
+  margin-top: 0;
+}
 .courseWork-box ul {
   list-style: disc;
+  text-align: left;
   padding-left: 20px;
 }
 
-/* Location Box */
-.location-box picture,
-.location-box img {
-  width: 100%;
+.country-box {
+  background: #ffffff;
+  border: 2px solid var(--true-blue);
+  border-radius: 10px;
+  width: 300px;
+  height: 300px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.country-box h2 {
+  margin-top: 0;
+}
+.country-box picture,
+.country-box img {
+  width: 80%;
   height: auto;
-  border-radius: 5px;
+  border-radius: 10px;
+  margin: 0 auto;
 }
 
-/* Certificate Box: Filter Buttons */
 .boxButton {
   display: flex;
-  justify-content: space-around;
-  margin-bottom: 1em;
+  justify-content: center;
+  gap: 5px;
+  margin: 10px 0;
 }
 .courseButton {
-  padding: 0.5em 1em;
-  background: #004080;
+  padding: 8px 12px;
+  background: var(--true-blue);
   color: #fff;
   border: none;
-  border-radius: 3px;
+  border-radius: 5px;
   cursor: pointer;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.courseButton:hover {
+  background-color: var(--oxford-blue);
+  transform: scale(1.05);
 }
 
-/* Container for Course Cards */
-.boxcertificate01 {
-  margin-bottom: 1em;
+.certificate-box {
+  background: #ffffff;
+  border: 2px solid var(--true-blue);
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
 }
-/* Course Cards */
+.certificate-box h2 {
+  margin-top: 0;
+}
+.boxcertificate01.boxCourse {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  margin: 10px auto;
+}
+
 .course-card {
   border: 1px solid #ddd;
-  padding: 1em;
-  margin: 0.5em 0;
+  padding: 10px;
   border-radius: 5px;
   background: #fafafa;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+}
+.course-card:hover {
+  background-color: #e0e0e0;
+  transform: scale(1.05);
 }
 .course-card.completed {
-  background: #d0f0c0;
-  border-color: #90ee90;
+  background: var(--yale-blue);
+  color: #fff;
 }
 
-/* FOOTER */
+dialog {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  border: none;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  background: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+dialog[open] {
+  opacity: 1;
+}
+dialog h2,
+dialog h3 {
+  margin: 0 0 10px 0;
+  font-weight: normal;
+}
+dialog p {
+  margin: 10px 0;
+  line-height: 1.5;
+}
+dialog button#closeModal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: var(--true-blue);
+  color: var(--alice-blue);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+dialog button#closeModal:hover {
+  background: var(--oxford-blue);
+  transform: scale(1.05);
+}
+
 footer {
-  background: #ccc;
+  background: var(--oxford-blue);
+  color: var(--alice-blue);
   text-align: center;
-  padding: 1em;
+  padding: 10px;
 }

@@ -2,108 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="W01 Assignment: Course Home Page for WDD 231">
   <meta name="author" content="Luis">
   <link rel="icon" href="images/favorite-favicon.ico">
   
-  <!-- Social and Open Graph Meta Tags -->
-  <meta property="og:title" content="Course Home Page | Rubia M. Francesco">
+  <meta property="og:title" content="Home | Luis">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/toloria_small.jpg">
+  <meta property="og:image" content="images/el_salvador.jpg">
   <meta property="og:url" content="https://your-github-username.github.io/wdd231/index.html">
   <meta name="twitter:card" content="summary_large_image">
   
-  <title>W01 Assignment: Course Home Page</title>
+  <title>Home | Luis</title>
   
-  <!-- Preconnect to Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Google Fonts: using Barlow and Lato -->
   <link href="https://fonts.googleapis.com/css2?family=Barlow&family=Lato&display=swap" rel="stylesheet">
   
-  <!-- CSS Files -->
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/style-small.css">
-  <link rel="stylesheet" href="styles/style-large.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
   
-  <!-- JavaScript Files with defer attribute -->
   <script src="scripts/main.js" defer></script>
   <script src="scripts/courses.js" defer></script>
 </head>
-
 <body>
-  <!-- HEADER: Avatar, BYU‑I logo, and name -->
   <header>
-    <div class="header-top">
-      <img src="images/byui-logo.png" alt="BYU-I Logo" class="byui-logo">
-      <span class="student-name">Rubia M. Francesco</span>
+    <div class="profile-info">
+      <img class="avatar" src="images/profile.jpg" alt="Luis' profile photo">
+      <h1>Luis Escarate Evora</h1>
     </div>
-    <!-- Course title (you can modify the text if lo deseas) -->
-    <h1 class="course-title">WDD 231: Web Frontend Development I</h1>
-    <!-- Hamburger menu button for mobile -->
     <button id="menu" title="Menu"></button>
   </header>
   
-  <!-- NAVIGATION: Responsive navigation menu -->
   <nav>
     <ul>
       <li><a class="active" href="index.html">Home</a></li>
-      <li><a href="chamber.html" target="_blank">Chamber</a></li>
-      <li><a href="final.html" target="_blank">Final</a></li>
+      <li><a href="chamber/index.html" target="_blank">Chamber</a></li>
+      <li><a href="final/index.html" target="_blank">Final</a></li>
       <li><a href="https://github.com/your-github-username" target="_blank">GitHub Profile</a></li>
-      <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+      <li><a href="https://www.linkedin.com/in/your-linkedin-username" target="_blank">LinkedIn</a></li>
     </ul>
   </nav>
   
-  <!-- MAIN CONTENT -->
   <main>
-    <!-- Section 1: Course Work Panel -->
-    <section class="courseWork-box">
-      <h2>Course Work</h2>
-      <ul>
-        <li>Chamber of Commerce Site Planning</li>
-        <li>Chamber of Commerce Directory Page</li>
-        <li>Chamber Home Page</li>
-        <li>Membership Application Form / Project Proposal</li>
-        <li>Discover Page / Project Site Plan</li>
-        <li>Individual Website Project</li>
-        <li>Final Exam Test</li>
-      </ul>
-    </section>
+    <div class="top-section">
+      <section class="courseWork-box">
+        <h2>Course Work</h2>
+        <ul>
+        </ul>
+      </section>
+      <section class="country-box">
+        <h2>El Salvador Santa Ana</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="images/el_salvador.jpg">
+          <source media="(min-width: 480px)" srcset="images/el_salvador.jpg">
+          <img src="images/el_salvador.jpg" alt="View of Santa Ana, El Salvador" width="300" height="225">
+        </picture>
+        <p>Santa Ana</p>
+      </section>
+    </div>
     
-    <!-- Section 2: Location Panel (Toloria, Madagascar) -->
-    <section class="location-box">
-      <h2>Toloria, Madagascar</h2>
-      <picture>
-        <source media="(min-width: 768px)" srcset="images/toloria_large.jpg">
-        <source media="(min-width: 480px)" srcset="images/toloria_medium.jpg">
-        <img src="images/toloria_small.jpg" alt="Baobab Trees in Toloria, Madagascar" width="300" height="225">
-      </picture>
-      <p>Toloria</p>
-    </section>
+    <div class="boxButton">
+      <button class="courseButton" value="all">All</button>
+      <button class="courseButton" value="cse">CSE</button>
+      <button class="courseButton" value="wdd">WDD</button>
+    </div>
     
-    <!-- Section 3: Certificate (Course List) -->
     <section class="certificate-box">
       <h2>Web and Computer Programming Certificate</h2>
-      <!-- Buttons to filter courses -->
-      <div class="boxButton">
-        <button class="courseButton" value="all" title="Show All Courses">All</button>
-        <button class="courseButton" value="cse" title="Show CSE Courses">CSE</button>
-        <button class="courseButton" value="wdd" title="Show WDD Courses">WDD</button>
+      <div class="boxcertificate01 boxCourse">
       </div>
-      <!-- Container to display course cards dynamically -->
-      <div class="boxcertificate01 boxCourse"></div>
-      <!-- Optional dialog for additional course details -->
       <dialog id="courses-details"></dialog>
-      <!-- Dynamic total credits display -->
       <p id="totalCreditsCert01">Total Credits for Certificate: 0</p>
     </section>
   </main>
   
-  <!-- FOOTER -->
   <footer>
-    <p>&copy; <span id="currentyear"></span> Rubia Magdalena Francesco Madagascar</p>
+    <p>&copy;<span id="currentyear"></span> Luis | El Salvador, Santa Ana</p>
     <p id="lastModified"></p>
   </footer>
 </body>
