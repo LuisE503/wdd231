@@ -1,18 +1,17 @@
+/* style-large.css */
 @media screen and (min-width: 768px) {
-  .hamburger-menu {
-    display: none !important;
-  }
-  
   nav ul {
     display: flex !important;
     justify-content: center;
     flex-direction: row;
-    gap: 20px;
+    gap: 10px;
     padding: 10px 0;
   }
-  
   nav ul li {
     margin: 0;
+  }
+  nav button#menu {
+    display: none;
   }
   
   main {

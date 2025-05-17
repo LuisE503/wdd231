@@ -1,3 +1,4 @@
+
 :root {
   --true-blue: #0466c8;
   --yale-blue: #023e7d;
@@ -82,35 +83,20 @@ nav a.active {
   color: var(--oxford-blue);
 }
 
-.hamburger-menu {
-  display: none; 
-  flex-direction: column;
-  justify-content: space-between;
-  width: 35px;
-  height: 25px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-}
-.hamburger-menu .bar {
-  width: 100%;
-  height: 4px;
-  background-color: var(--alice-blue);
-  border-radius: 2px;
-}
-
 main {
   padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
+
 .top-section {
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
 }
+
 .courseWork-box {
   background: #ffffff;
   border: 2px solid var(--true-blue);
@@ -129,6 +115,7 @@ main {
   text-align: left;
   padding-left: 20px;
 }
+
 .country-box {
   background: #ffffff;
   border: 2px solid var(--true-blue);
@@ -256,21 +243,4 @@ footer {
   color: var(--alice-blue);
   text-align: center;
   padding: 10px;
-}
-
-@media screen and (max-width: 768px) {
-  .hamburger-menu {
-    display: flex;
-    margin: 10px auto; 
-  }
-  nav ul {
-    display: none;
-  }
-  nav ul.open {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 10px 0;
-  }
 }

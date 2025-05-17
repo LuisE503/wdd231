@@ -54,6 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
   
+  // Iniciar con el filtro "all"
   document.querySelector('.courseButton[value="all"]').click();
   
   const courseDetails = document.getElementById("courses-details");
@@ -68,6 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     `;
     courseDetails.showModal();
     
+    // Agregar listener para la X y para cerrar al hacer click fuera del diálogo
     document.getElementById("closeModal").addEventListener("click", closeDialog);
     courseDetails.addEventListener("click", function(e) {
       if(e.target === this) {
