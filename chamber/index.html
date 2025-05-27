@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber Home</title>
+  <meta name="description" content="Chamber Home Page" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body id="chamber-index">
+  <header>
+    <div class="container header-container">
+      <img src="images/chamber.png" alt="Chamber Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Hero image" class="hero-image" />
+      <a href="join.html" class="cta">Join Us</a>
+    </section>
+    <section class="current-events">
+      <h2>Current Events</h2>
+      <div id="events-list"></div>
+    </section>
+    <section class="weather">
+      <h2>Weather in <span id="city-name">San Miguel</span></h2>
+      <div id="current-weather">
+        <p>Temperature: <span id="current-temp"></span></p>
+        <p>Description: <span id="weather-description"></span></p>
+      </div>
+      <figure>
+        <img id="weather-icon" src="" alt="Weather icon" />
+        <figcaption id="weather-figcaption"></figcaption>
+      </figure>
+      <div id="forecast">
+        <h3>3-Day Forecast</h3>
+        <ul id="forecast-list"></ul>
+      </div>
+    </section>
+    <section class="spotlight">
+      <h2>Company Spotlight</h2>
+      <div id="spotlight-cards"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 San Miguel Chamber of Commerce. All Rights Reserved.</p>
+  </footer>
+  <script src="scripts/weather.js"></script>
+  <script src="scripts/spotlight.js"></script>
+  <script src="scripts/events.js"></script>
+</body>
+</html>

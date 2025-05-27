@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You - Chamber Membership Application</title>
+  <meta name="description" content="Thank You for Joining the Chamber" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body id="thankyou-page">
+  <header>
+    <div class="container header-container">
+      <img src="images/chamber.png" alt="Chamber Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h2>Thank You for Your Application!</h2>
+    <div id="application-info"></div>
+  </main>
+  <footer>
+    <p>&copy; 2025 San Miguel Chamber of Commerce. All Rights Reserved.</p>
+  </footer>
+  <script>
+    window.addEventListener("DOMContentLoaded", function () {
+      const params = new URLSearchParams(window.location.search);
+      const firstName = params.get("firstName") || "";
+      const lastName = params.get("lastName") || "";
+      const email = params.get("email") || "";
+      const phone = params.get("phone") || "";
+      const orgName = params.get("orgName") || "";
+      const timestamp = params.get("timestamp") || "";
+      const infoDiv = document.getElementById("application-info");
+      infoDiv.innerHTML =
+        "<p>First Name: " + firstName + "</p>" +
+        "<p>Last Name: " + lastName + "</p>" +
+        "<p>Email: " + email + "</p>" +
+        "<p>Mobile Phone: " + phone + "</p>" +
+        "<p>Organization Name: " + orgName + "</p>" +
+        "<p>Application Date: " + timestamp + "</p>";
+    });
+  </script>
+</body>
+</html>

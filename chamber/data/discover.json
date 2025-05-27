@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Business One",
+    "address": "123 Main St, Cityville",
+    "description": "A leading company in technology.",
+    "photo": "business1.webp"
+  },
+  {
+    "title": "Business Two",
+    "address": "456 Oak St, Townsville",
+    "description": "Experts in renewable energy solutions.",
+    "photo": "business2.webp"
+  },
+  {
+    "title": "Business Three",
+    "address": "789 Pine Ave, Villageton",
+    "description": "Quality bakery goods and desserts.",
+    "photo": "business3.webp"
+  },
+  {
+    "title": "Business Four",
+    "address": "321 Maple Blvd, Metro City",
+    "description": "Financial services and banking solutions.",
+    "photo": "business4.webp"
+  },
+  {
+    "title": "Business Five",
+    "address": "654 Cedar Ln, Capital City",
+    "description": "Fashion apparel and accessories.",
+    "photo": "business5.webp"
+  },
+  {
+    "title": "Business Six",
+    "address": "987 Birch Rd, Suburbia",
+    "description": "Automotive repair and maintenance.",
+    "photo": "business6.webp"
+  },
+  {
+    "title": "Business Seven",
+    "address": "159 Elm St, Uptown",
+    "description": "Healthcare services and wellness programs.",
+    "photo": "business7.webp"
+  },
+  {
+    "title": "Business Eight",
+    "address": "753 Spruce Dr, Downtown",
+    "description": "A premier provider of IT solutions.",
+    "photo": "business8.webp"
+  }
+]

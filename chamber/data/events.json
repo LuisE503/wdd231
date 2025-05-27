@@ -1,0 +1,16 @@
+{
+  "events": [
+    {
+      "name": "San Miguel Business Meetup",
+      "date": "2025-06-15T09:00:00"
+    },
+    {
+      "name": "Networking Breakfast",
+      "date": "2025-06-20T08:00:00"
+    },
+    {
+      "name": "Chamber Gala",
+      "date": "2025-07-01T19:00:00"
+    }
+  ]
+}

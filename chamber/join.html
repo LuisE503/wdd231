@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chamber Membership Join</title>
+  <meta name="description" content="Apply to join the Chamber of Commerce" />
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body id="join-page">
+  <header>
+    <div class="container header-container">
+      <img src="images/chamber.png" alt="Chamber Logo" class="logo" />
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="discover.html">Discover</a></li>
+          <li><a href="join.html" class="active">Join</a></li>
+          <li><a href="directory.html">Directory</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="join-container">
+      <div class="form-container">
+        <form method="get" action="thankyou.html">
+          <label>
+            First Name:
+            <input type="text" name="firstName" required title="First Name" autocomplete="given-name" />
+          </label>
+          <label>
+            Last Name:
+            <input type="text" name="lastName" required title="Last Name" autocomplete="family-name" />
+          </label>
+          <label>
+            Organization Title:
+            <input type="text" name="orgTitle" required title="Organization Title" autocomplete="organization-title" pattern="[A-Za-z-\s]{7,}" />
+          </label>
+          <label>
+            Email:
+            <input type="email" name="email" required title="Email" autocomplete="email" placeholder="example@domain.com" />
+          </label>
+          <label>
+            Mobile Phone:
+            <input type="tel" name="phone" required title="Mobile Phone" autocomplete="tel" />
+          </label>
+          <label>
+            Organization Name:
+            <input type="text" name="orgName" required title="Organization Name" autocomplete="organization" />
+          </label>
+          <label>
+            Membership Level:
+            <select name="membership" required title="Membership Level">
+              <option value="">Select a membership level</option>
+              <option value="NP">NP Membership</option>
+              <option value="Bronze">Bronze Membership</option>
+              <option value="Silver">Silver Membership</option>
+              <option value="Gold">Gold Membership</option>
+            </select>
+          </label>
+          <label>
+            Organization Description:
+            <textarea name="orgDescription" title="Organization Description"></textarea>
+          </label>
+          <input type="hidden" name="timestamp" id="timestamp" />
+          <input type="submit" value="Submit Application" />
+        </form>
+      </div>
+      <div class="cards-container">
+        <div class="membership-card" id="card-np">
+          <h3>NP Membership</h3>
+          <p>No fee special for non-profits.</p>
+          <button class="learn-btn" data-modal="modal-np">Learn More</button>
+        </div>
+        <div class="membership-card" id="card-bronze">
+          <h3>Bronze Membership</h3>
+          <p>Basic benefits package.</p>
+          <button class="learn-btn" data-modal="modal-bronze">Learn More</button>
+        </div>
+        <div class="membership-card" id="card-silver">
+          <h3>Silver Membership</h3>
+          <p>Enhanced networking and training.</p>
+          <button class="learn-btn" data-modal="modal-silver">Learn More</button>
+        </div>
+        <div class="membership-card" id="card-gold">
+          <h3>Gold Membership</h3>
+          <p>Premium benefits and spotlight advertising.</p>
+          <button class="learn-btn" data-modal="modal-gold">Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="modals-container">
+      <div class="modal" id="modal-np">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3>NP Membership Benefits</h3>
+          <p>Benefits include networking events and discounted training.</p>
+        </div>
+      </div>
+      <div class="modal" id="modal-bronze">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3>Bronze Membership Benefits</h3>
+          <p>Basic access to chamber events and marketing.</p>
+        </div>
+      </div>
+      <div class="modal" id="modal-silver">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3>Silver Membership Benefits</h3>
+          <p>Includes event discounts and more exposure.</p>
+        </div>
+      </div>
+      <div class="modal" id="modal-gold">
+        <div class="modal-content">
+          <span class="close-btn">&times;</span>
+          <h3>Gold Membership Benefits</h3>
+          <p>Premium benefits including spotlight advertising and VIP events.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2025 San Miguel Chamber of Commerce. All Rights Reserved.</p>
+  </footer>
+  <script src="scripts/join.js"></script>
+</body>
+</html>
