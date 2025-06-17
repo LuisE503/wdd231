@@ -39,12 +39,12 @@
     "title": "Business Seven",
     "address": "159 Elm St, Uptown",
     "description": "Healthcare services and wellness programs.",
-    "photo": "business7.webp"
+    "photo": "business7.png"
   },
   {
     "title": "Business Eight",
     "address": "753 Spruce Dr, Downtown",
     "description": "A premier provider of IT solutions.",
-    "photo": "business8.webp"
+    "photo": "business8.png"
   }
 ]
